@@ -1,0 +1,7 @@
+-- name: my first YML programm
+   hosts: all
+   tasks:
+      - name: instal httpd
+        yum:
+          name: httpd
+          state: installed

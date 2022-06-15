@@ -1,0 +1,20 @@
+--
+- name: New Project
+  hosts: all
+  tasks:
+      - name: latest version of all software
+        yum:
+            name: 
+               - httpd
+               - mariadb-server
+            state: latest
+      - name: httpd enabled and running
+        service: 
+            name: httpd
+            enabled: true
+            state: started
+      - name: mariadb enabled and running
+        service:
+            name: mariadb
+            enabled: true
+            state: started        
